@@ -5,6 +5,29 @@
   <title>Sesli Ürün Bilgisi</title>
 </head>
 <body>
+  <!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesli QR Kod Sayfası</title>
+</head>
+<body>
+    <!-- Ses dosyasını yükleyen audio etiketi -->
+    <audio id="myAudio" autoplay>
+        <source src="https://denizzeybek-code.github.io/zeybeketiket-rfid/urun-bilgi.mp3" type="audio/mp3">
+        Tarayıcınız ses dosyasını desteklemiyor.
+    </audio>
+
+    <script>
+        // Sayfa yüklendiğinde sesin çalmasını sağlayan kod
+        window.onload = function() {
+            var audio = document.getElementById('myAudio');
+            audio.play();
+        };
+    </script>
+</body>
+</html>
   <h1>Organik Pamuk Tişört</h1>
   <p>Zeybek Etiket tarafından üretilmiştir.</p>
   <p>Medium beden, gri renktir.</p>
