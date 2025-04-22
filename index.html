@@ -6,7 +6,7 @@
 </head>
 <body>
   <!-- Sayfa yüklendiğinde sesin çalmasını sağlayan kod -->
-  <audio id="myAudio" autoplay>
+  <audio id="myAudio" autoplay muted>
       <source src="https://denizzeybek-code.github.io/zeybeketiket-rfid/urun-bilgi.mp3" type="audio/mp3">
       Tarayıcınız ses dosyasını desteklemiyor.
   </audio>
@@ -18,9 +18,18 @@
 
   <p><strong>▶ Sesli açıklamayı dinlemek için aşağıdaki oynat düğmesine dokunun:</strong></p>
 
+  <!-- Kullanıcı etkileşimi ile sesin başlatılması -->
   <audio controls>
     <source src="https://denizzeybek-code.github.io/zeybeketiket-rfid/urun-bilgi.mp3" type="audio/mpeg">
     Tarayıcınız ses dosyasını desteklemiyor.
   </audio>
+
+  <script>
+    // Sayfa yüklendiğinde sesin çalmasını sağlayan kod
+    window.onload = function() {
+        var audio = document.getElementById('myAudio');
+        audio.play();
+    };
+  </script>
 </body>
 </html>
